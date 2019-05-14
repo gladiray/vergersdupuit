@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+{% load i18n  mezzanine_tags staticfiles%}
+{% block title %}{% endblock %}
+{% block breadcrumb_wrapper %}
+{% endblock %}
+
+{% block title_wrapper %}
+{% endblock %}
+{% block main %}
+<!--Services-->
+    <div class="welcome-picture">
+        <div class="beef" style="margin-top: 224px;">
+			<div class="content">
+                <h1>{% trans "Bed & Breakfast in the drôme the collines" %}</h1>
+                <h3>{% trans "Organic farm selling directly to consumers" %}</h3>
+            </div>
+	   </div>
+    </div>
+    <section class="presentation row">
+        <div class="presentation-box col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+        <i class="fas fa-wifi" title="{% trans 'Wifi'%}"></i><i class="fas fa-parking" title="{% trans 'Free parking'%}"></i>
+            <i class="fas fa-utensils" title="{% trans 'kitchen'%}"></i><i class="fas fa-coffee" title="{% trans 'Breakfast included'%}"></i>
+        {% blocktrans %}
+            <p>We welcome you to our family farm surrounded by our organic nuts orchard in the drôme de collines area.
+            We are a family of farmers since 1936 and today we grow apricots, nuts, almonds and cherries and produce oil, jams and fruit juice.
+                <a href="/nos-produits/">Check our products page for more information</a>
+            </p>
+            <p>
+            The bed and breakfast part of the farm have been added 2 years ago, so its brand new. You can enjoy with us
+            the tranquility of the french country side, taste great local products and hike and visit the area.
+            We would love to <a href="/nos-produits/"> give you ideas for things to do around us </a>and we speak english and french.
+            </p>
+            We built comfortable high quality rooms just for you, with love and attention to details.
+            The common area includes a kitchen you can use, and a french breakfast with local products awaits for you every morning.
+        {% endblocktrans %}
+        </div>
+    </section>
+    <section class="row green-room">
+        <div class="room-description-left col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
+            <h3>{% trans "The green rooms: Family room for up to 5 people" %}</h3>
+            <p>
+                {% blocktrans %}
+                2 separate rooms, ideal for a family. The first room has is a 20 m² room with a king size bed
+                a toilet and a shower (separated). With a large italian shower.
+                The second one is 16 m² with 3 single beds.
+                Each room has a closet.
+                {% endblocktrans %}
+            </p>
+            <div class="room-price">
+                {% blocktrans %}
+                Price per night, breakfast included<br>
+                Family price: 65€ pour 2 adults et 18€ per child. <br>
+                Normal price : 65€ pour 2 adults et 25€ per extra adult.
+                {% endblocktrans %}
+            </div>
+            <a href="/nos-produits/" class="room-link">{% trans "See more pictures" %}</a>
+            <a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/drome/les-vergers-du-puits-g61721" target="_blank" class="btn btn-primary btn-lg">
+                {% trans "BOOK NOW" %}
+            </a>
+
+
+        </div>
+        <div class="room-photo col-md-3 col-xs-12">
+            <img  src="{% static "images/gite/ch_3.jpg" %}" alt="{% trans "Familly room - 3 beds room" %}">
+        </div>
+        <div class="room-photo col-md-3 col-xs-12">
+            <img  src="{% static "images/gite/chmbre_2.jpg" %}" alt="{% trans "Familly room - king size bed" %}">
+        </div>
+
+    </section>
+
+    <section class="row blue-room">
+        <div class="room-photo col-md-5 col-md-offset-1">
+            <img  src="{% static "images/gite/ph11_ch_1.jpg" %}" alt="{% trans "Double room" %}">
+        </div>
+        <div class="room-description-right col-md-4 col-xs-10 col-xs-offset-1">
+            <h3>{% trans "The blue room" %}</h3>
+            <p>
+                {% blocktrans %}
+                    A 20 m² room with a king size bed a toilet and a shower (separated). With a large italian shower.
+                {% endblocktrans %}
+            </p>
+            <div class="room-price">
+                {% trans "Price per night, breakfast included 65€" %}
+            </div>
+            <a href="/nos-produits/" class="room-link">{% trans "See more pictures" %}</a>
+            <a href="https://www.gites-de-france.com/fr/auvergne-rhone-alpes/drome/les-vergers-du-puits-g61721" target="_blank" class="btn btn-success btn-lg">
+                {% trans "BOOK NOW" %}
+            </a>
+        </div>
+
+    </section>
+    <section class="row common-room">
+        <div class="room-description-left col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
+            <h3>{% trans "The common room" %}</h3>
+            <p>
+                {% blocktrans %}
+                A common space to relax with a sofa and tables. Fully equipped kitchen is waiting for you, where you can make dinner.
+                Games and books are at your disposal.
+                {% endblocktrans %}
+
+            </p>
+            <a href="/nos-produits/" class="room-link">{% trans "See more pictures" %}</a>
+        </div>
+        <div class="room-photo col-md-6 col-xs-12">
+            <img  src="{% static "images/gite/common-room.jpg" %}" alt="{% trans "Common room" %}">
+        </div>
+
+    </section>
+
+    <section class="row outside">
+        <div class="room-photo col-md-5 col-md-offset-1">
+            <img  src="{% static "images/gite/ext.jpg" %}" alt="{% trans "Familly room" %}">
+        </div>
+        <div class="room-description-right col-md-4 col-xs-10 col-xs-offset-1">
+            <h3>{% trans "The farm" %}</h3>
+            <p>
+                {% blocktrans %}
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                {% endblocktrans %}
+            </p>
+
+
+            <a href="/nos-produits/" class="room-link">{% trans "See more pictures" %}</a>
+        </div>
+    </section>
+
+    <section id="services">
+    <div class="container">
+
+        <div class="row-fluid">
+            <div class="col-md-2 col-md-offset-3 col-xs-3 col-xs-offset-2">
+                <div class="media">
+                    <div class="media-body">
+                        <a href="https://www.gites-de-france.com/location-vacances-Bren-Chambre-d-hotes-Les-Vergers-Du-Puits-26G61721.html"  target="_blank">
+                            <img class="pull-left" src="{% static "images/gite/gites-de-france.png" %}" alt="{% trans "Logo gîte de France" %}" >
+                            <img class="pull-left" src="{% static "images/gite/gitedefrance_3epis.png" %}" alt="{% trans "Gîte de France 3 stars" %}" >
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">Certification Bio</h4>
+                        <img class="pull-left" src="{% static "images/portfolio/full/logo_bio_europe.jpg" %}" alt="{% trans "Europe organic logo"%}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <div class="media">
+                    <div class="media-body">
+                        <img class="pull-left" src="{% static "images/portfolio/full/AB_cert.jpg" %}" alt="{% trans "French organic logo"%}" >
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!--/Services-->
+    <style>
+    </style>
+
+{% block left_wrapper %}
+{% endblock %}
+
+
+{% block main_wrapper %}
+
+
+{% endblock %}
+{% block right_wrapper %}
+{% endblock %}
+
+
+
+{% endblock %}
+{% block extra_head %}
+    <style>
+        .welcome-picture {
+            position: relative;
+            height: 600px;
+            background: url({% static "images/abr_fleuri_argil.jpg" %})no-repeat center center;
+            background-size: cover;
+
+        }
+        .welcome-picture .beef .content {
+            position: relative;
+            color: #fff;
+            max-width: 700px;
+            text-align: center;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 20px;
+        }
+        .welcome-picture .beef {
+            position: absolute;
+            width: 100%;
+            margin-top: 200px;
+        }
+    .room-photo {
+        border-radius: 25px;
+    }
+    .green-room {
+        background-color: #3c763d;
+        color:white;
+    }
+    .blue-room {
+        background-color: #2a6496;
+        color:white;
+    }
+    .room-price {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 0.75em;
+    }
+    .outside {
+        background-color: #66512c;
+        color:white;
+    }
+    .common-room {
+        background-color: #88b23d;
+        color:white;
+    }
+    .room-description-left {
+        text-align: right;
+    }
+    .room-description-right {
+        text-align: left;
+    }
+    .fas {
+        margin-left: 10px;
+    }
+    .presentation-box {
+        box-shadow: 0 1px 12px 1px hsla(0,0%,47%,.5);
+        border-radius: .4375rem;
+        padding:10px;
+    }
+    .room-link{
+        display: block;
+        margin-bottom: 10px;
+        color:#e9d22d;
+    }
+    </style>
+
+{% endblock %}

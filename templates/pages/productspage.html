@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags thumbnail %}
+
+{% block meta_title %}{{ page.meta_title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block main %}
+    {% with page.get_content_model as productspage %}
+        <div class="lead">
+            {{ productspage.content|safe }}
+        </div>
+        <div class="items-container container">
+            {% for product in productspage.product_set.all %}
+
+                <div class="product-item col-md-3">
+                    <h4>{{ product.name }}</h4>
+                    <div class="preview">
+                        {% thumbnail product.photo "200x200" as im %}
+                            <img src="{{ im.url }}">
+                        {% endthumbnail %}
+                    </div>
+                    <div class="desc">
+                        {% if product.season %}
+                            <span class="no-stock">{{ product.season }}</span>
+                        {% endif %}
+                        {% if product.description %}
+                            {{ product.description }}
+                        {% endif %}
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endwith %}
+{% endblock %}
