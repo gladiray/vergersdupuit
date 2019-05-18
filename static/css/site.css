@@ -12,6 +12,9 @@ img.logo-img {
     width: 25%;
 
 }
+.lead {
+    margin-top: 50px;
+}
 .navbar-brand  {
     display: block;
 }

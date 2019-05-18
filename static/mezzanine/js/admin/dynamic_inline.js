@@ -57,6 +57,7 @@ jQuery(function($) {
             }
         }
         $.each($(parentSelector), function(i, parent) {
+
             var order = 0;
             $.each($(parent).find(orderSelector), function(i, field) {
                 var parent = $(field).parent().parent();
