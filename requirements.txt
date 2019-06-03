@@ -1,3 +1,6 @@
 Mezzanine==4.3.1
 sorl-thumbnail==12.5.0
 grappelli_safe==0.5.2
+django-modeltranslation==0.13.1
+django==1.11.21
+psycopg2==2.7.7

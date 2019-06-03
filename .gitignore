@@ -6,3 +6,5 @@
 local_settings.py
 /.idea
 /static/media/uploads/gallery
+/static/media/upload
+/static/media/cache
