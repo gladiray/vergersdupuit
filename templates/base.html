@@ -45,12 +45,6 @@
 <header>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container" id="id_upper_bar">
-                <!--
-                <a href="https://www.gites-de-france.com/location-vacances-Bren-Chambre-d-hotes-Les-Vergers-Du-Puits-26G61721.html"  target="_blank">
-                    <img class="pull-left" src="{% static "images/logo_gites_de_france.png" %}" alt=" " width="3%">
-                </a>
-                <img class="pull-left" src="{% static "images/portfolio/full/logo_bio_europe.jpg" %}" alt=" " width="3%">
-                -->
                 <div class="navbar-header col-md-5 col-sm-5 col-xs-12" >
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">{% trans "Toggle Navigation" %}</span>
@@ -59,7 +53,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand col-xs-9" href="/" >
-                        <img class="pull-left logo-img" src="{% static "images/big-logo-color.png" %}" alt="{% trans "Logo les Vergers de puits" %}" >
+                        <img class="pull-left logo-img" src="{% static "images/logos/big-logo-color.png" %}" alt="{% trans "Logo les Vergers de puits" %}" >
                     </a>
                     <h3 class="col-md-6 pull-right">{% trans "Les Vergers de puits" %}</h3>
 
@@ -80,7 +74,7 @@
 
         <!--row-fluids-->
         <div class="row-fluid">
-            <div class="col-md-4 col-xs-3">
+            <div class="col-md-4 col-xs-12">
                 <h4>{% trans "ADRESSE" %}</h4>
                 <ul class="unstyled address">
                     <li>
@@ -96,18 +90,21 @@
                     </li>
                     <li>
                         <a href="https://www.facebook.com/vergersdupuits/" target="_blank">
-                            <img class="social-icon" src="{% static "images/facebook_small.png" %}"
+                            <img class="social-icon" src="{% static "images/logos/facebook_small.png" %}"
                                                                            alt="Page Facebook Les Verges de puits" width="32px" height="32px">
                             <strong>{% trans "Suivez nous sur facebook" %}</strong></a>
                     </li>
                 </ul>
+                <br>
             </div>
-            <div class="col-md-2 col-md-offset-1 col-xs-3">
+            <div class="col-md-2  col-xs-3">
                 <div class="media">
                     <div class="media-body">
                         <a href="https://www.gites-de-france.com/location-vacances-Bren-Chambre-d-hotes-Les-Vergers-Du-Puits-26G61721.html"  target="_blank">
-                            <img class="pull-left" src="{% static "images/gite/gites-de-france.png" %}" alt="{% trans "Logo gîte de France" %}" >
-                            <img class="pull-left" src="{% static "images/gite/gitedefrance_3epis.png" %}" alt="{% trans "Gîte de France 3 stars" %}" >
+                            <picture>
+                                <img class="pull-left" src="{% static "images/logos/gites-de-france.png" %}" alt="{% trans "Logo gîte de France" %}" >
+                                <img class="pull-left" src="{% static "images/logos/3stars.png" %}" alt="{% trans "Gîte de France 3 stars" %}" >
+                            </picture>
                         </a>
                     </div>
                 </div>
@@ -115,15 +112,30 @@
             <div class="col-md-2 col-xs-3">
                 <div class="media">
                     <div class="media-body">
-                        <h4 class="media-heading">Certification Bio</h4>
-                        <img class="pull-left" src="{% static "images/portfolio/full/logo_bio_europe.jpg" %}" alt="{% trans "Europe organic logo"%}">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="{% static "images/logos/trophees_2018_mobile.jpg" %}">
+                            <img class="pull-left" src="{% static "images/logos/trophees_2018.jpg" %}" alt="{% trans "Europe organic logo"%}">
+                        </picture>
                     </div>
                 </div>
             </div>
             <div class="col-md-2 col-xs-3">
                 <div class="media">
                     <div class="media-body">
-                        <img class="pull-left" src="{% static "images/portfolio/full/AB_cert.jpg" %}" alt="{% trans "French organic logo"%}" >
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="{% static "images/logos/organic_eu_mobile.jpg" %}">
+                            <img class="pull-left" src="{% static "images/logos/organic_eu.jpg" %}" alt="{% trans "Europe organic logo"%}">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <div class="media">
+                    <div class="media-body">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="{% static "images/logos/AB_cert_mobile.jpg" %}">
+                            <img class="pull-left" src="{% static "images/logos/AB_cert.jpg" %}" alt="{% trans "French organic logo"%}" >
+                        </picture>
                     </div>
                 </div>
             </div>

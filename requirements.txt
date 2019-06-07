@@ -4,3 +4,4 @@ grappelli_safe==0.5.2
 django-modeltranslation==0.13.1
 django==1.11.21
 psycopg2==2.7.7
+django_compressor==2.3

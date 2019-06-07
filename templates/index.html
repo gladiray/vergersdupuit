@@ -37,7 +37,6 @@
     </section>
 
     {%  for section in  homepage_info.homepagesection_set.all %}
-        {% if forloop.counter0|divisibleby:"2" %}
             <section class="row" id="id_section_{{ section.id }}">
                 <div class="room-description-left col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1">
                     {{ section.text|safe }}
@@ -51,10 +50,15 @@
                     </div>
                 {% else %}
                     <div class="room-photo col-md-5 col-md-offset-1">
-                        <img  src="{{ MEDIA_URL }}{% thumbnail section.photo1.url 400 260 quality=100 %}" alt="{{ section.alt_photo1 }}">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="{{ MEDIA_URL }}{% thumbnail section.photo1.url 400 260  quality=100 %}">
+                        <img  src="{{ MEDIA_URL }}{% thumbnail section.photo1.url 680 440 quality=100 %}" alt="{{ section.alt_photo1 }}">
+                    </picture>
                     </div>
                 {% endif %}
             </section>
+            {% comment %}
+        {% if forloop.counter0|divisibleby:"2" %}
         {% else %}
             <section class="row" id="id_section_{{ section.id }}">
                 {% if section.photo2 %}
@@ -74,6 +78,7 @@
                 </div>
             </section>
         {% endif %}
+        {% endcomment %}
     {% endfor %}
 
 {% block left_wrapper %}
@@ -102,9 +107,14 @@
         .welcome-picture {
             position: relative;
             height: 600px;
-            background: url({% static "images/abr_fleuri_argil.jpg" %})no-repeat center center;
+            background: url({% static "images/abricots_field.jpg" %})no-repeat center center;
             background-size: cover;
 
+        }
+        @media only screen and (max-width: 480px) {
+        .welcome-picture {
+            background: url({% static "images/abricots_field_mobile.jpg" %})no-repeat center center;
+          }
         }
         .welcome-picture .beef .content {
             position: relative;
