@@ -36,19 +36,21 @@ body {
 }
 .no-stock {
     color: #c64906;
-}
-.desc {
     font-weight: bold;
 }
+.desc {
+    margin-top: 10px;
+}
 .product-item {
-    background-color: #D2C1AE;
-    margin-left: 10px;
-    border-radius: 25px;
-    padding: 10px;
+    background-color: #F8F5F2;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 5px;
     color:#654F38;
     margin-bottom: 20px;
     box-sizing: border-box;
     display: inline-block;
+    border: 5px solid #D5C3B2;
 }
 .items-container {
     display: flex;

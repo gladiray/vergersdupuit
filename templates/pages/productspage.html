@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load mezzanine_tags keyword_tags thumbnail %}
+{% load mezzanine_tags keyword_tags  %}
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
 
@@ -30,9 +30,7 @@
                 <div class="product-item col-md-3">
                     <h4>{{ product.name }}</h4>
                     <div class="preview">
-                        {% thumbnail product.photo "200x200" as im %}
-                            <img src="{{ im.url }}">
-                        {% endthumbnail %}
+                         <img  src="{{ MEDIA_URL }}{% thumbnail product.photo.url 200 100 quality=100 %}" alt="{{ product.name }}">
                     </div>
                     <div class="desc">
                         {% if product.season %}
