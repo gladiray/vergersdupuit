@@ -41,6 +41,9 @@ body {
 .desc {
     margin-top: 10px;
 }
+.room-description-left img {
+    width: auto;
+}
 .product-item {
     background-color: #F8F5F2;
     margin-left: 20px;
@@ -62,15 +65,21 @@ body {
     width: 100%;
     height: 100px;
     align-items:center;
+    font-size: 1.25em;
 
 }
 #id_upper_bar a {
     color: #e9d22d;
     font-family: "Fjalla One";
-    font-size: 14px;
     text-transform: uppercase;
     text-shadow: none;
-
+    font-size: 1.25em;
+}
+.logo-2 {
+    max-width: 75px;
+}
+.logo-3 {
+    max-width: 50px;
 }
 #id_upper_bar .nav>.active>a, .nav>li.active>a, header.navbar .nav>li.active>a:hover {
     background: transparent;
