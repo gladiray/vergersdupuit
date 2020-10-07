@@ -322,7 +322,7 @@ if os.path.exists(f):
 HOME_DIR = os.getenv("HOME")
 
 DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
-DBBACKUP_STORAGE_OPTIONS = {'location': HOME_DIR + '/backups/sdd/'}
+DBBACKUP_STORAGE_OPTIONS = {'location': HOME_DIR + '/backups/vergers/'}
 
 ####################
 # DYNAMIC SETTINGS #
