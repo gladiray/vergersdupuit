@@ -10,7 +10,6 @@ import mezzanine.core.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pages', '0005_auto_20190603_1245'),
         ('homepage', '0002_auto_20190604_0726'),
     ]
 
