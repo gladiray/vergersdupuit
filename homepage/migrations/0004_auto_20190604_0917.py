@@ -8,7 +8,6 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pages', '0005_auto_20190603_1245'),
         ('homepage', '0003_startpage_startpagesection'),
     ]
 
