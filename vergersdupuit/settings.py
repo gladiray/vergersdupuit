@@ -245,7 +245,8 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "products",
     "homepage",
-    "sorl.thumbnail"
+    "sorl.thumbnail",
+    'dbbackup'
     # "mezzanine.accounts",
 )
 
@@ -318,6 +319,10 @@ if os.path.exists(f):
     sys.modules[module_name] = module
     exec(open(f, "rb").read())
 
+HOME_DIR = os.getenv("HOME")
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': HOME_DIR + '/backups/sdd/'}
 
 ####################
 # DYNAMIC SETTINGS #
