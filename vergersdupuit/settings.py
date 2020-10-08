@@ -319,7 +319,7 @@ if os.path.exists(f):
     sys.modules[module_name] = module
     exec(open(f, "rb").read())
 
-HOME_DIR = os.getenv("HOME")
+HOME_DIR = "/home/galia"
 
 DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
 DBBACKUP_STORAGE_OPTIONS = {'location': HOME_DIR + '/backups/vergers/'}
